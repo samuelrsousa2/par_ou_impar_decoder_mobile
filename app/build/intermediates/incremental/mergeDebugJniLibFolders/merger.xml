@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\SamuelXD\Desktop\MEUS_PROJETOS\PAR_OU_IMPAR_DECODER_MOBILE\app\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\SamuelXD\Desktop\MEUS_PROJETOS\PAR_OU_IMPAR_DECODER_MOBILE\app\src\debug\jniLibs"/></dataSet></merger>
