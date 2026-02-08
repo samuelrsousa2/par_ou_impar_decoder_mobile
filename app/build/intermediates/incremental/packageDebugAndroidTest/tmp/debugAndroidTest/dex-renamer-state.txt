@@ -1,6 +1,6 @@
-#Sat Jan 24 00:14:47 BRT 2026
-base.0=C\:\\Users\\SamuelXD\\Desktop\\PAR_OU_IMPAR_DECODER_MOBILE\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
-base.1=C\:\\Users\\SamuelXD\\Desktop\\PAR_OU_IMPAR_DECODER_MOBILE\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+#Sun Feb 08 00:41:16 BRT 2026
+base.0=C\:\\Users\\SamuelXD\\Desktop\\MEUS_PROJETOS\\PAR_OU_IMPAR_DECODER_MOBILE\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\Users\\SamuelXD\\Desktop\\MEUS_PROJETOS\\PAR_OU_IMPAR_DECODER_MOBILE\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 renamed.0=classes.dex
