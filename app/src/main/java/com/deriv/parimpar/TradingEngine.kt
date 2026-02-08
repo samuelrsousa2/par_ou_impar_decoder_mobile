@@ -420,13 +420,20 @@ class TradingEngine {
             // Reset para próximo sinal
             isArmedForReal = false
             
+            // FIX: Se estava em modo virtual, reseta os contadores após o trade REAL
+            if (config.virtualMode) {
+                virtualWins = 0
+                virtualLosses = 0
+                android.util.Log.i("TradingEngine", "Trade REAL finalizado. Resetando contadores virtuais.")
+            }
+            
             // Check Stop Win
             if (config.stopWin > 0 && _totalProfit.value >= config.stopWin) {
                 stop()
                 _statusText.value = "Stop Win Atingido!"
             }
         } else {
-            // DEMO / Virtual - atualizar streaks
+            // DEMO / Virtual - atualizar streaks SOMENTE se não for trade REAL
             if (config.virtualMode) {
                 if (status == OpStatus.WIN) {
                     virtualWins++
@@ -436,15 +443,16 @@ class TradingEngine {
                     virtualWins = 0
                 }
                 
-                // Verificar se deve armar para REAL
-                if (config.vwinTarget > 0 && virtualWins >= config.vwinTarget) isArmedForReal = true
-                if (config.vlossTarget > 0 && virtualLosses >= config.vlossTarget) isArmedForReal = true
+                android.util.Log.i("TradingEngine", "Virtual Win/Loss: $virtualWins/$virtualLosses")
                 
-                // Se fez real, reseta
-                if (account == AccountType.REAL) {
-                    isArmedForReal = false
-                    virtualWins = 0
-                    virtualLosses = 0
+                // Verificar se deve armar para REAL
+                if (config.vwinTarget > 0 && virtualWins >= config.vwinTarget) {
+                    isArmedForReal = true
+                    android.util.Log.i("TradingEngine", "Gatilho V-WIN atingido! Armado para REAL.")
+                }
+                if (config.vlossTarget > 0 && virtualLosses >= config.vlossTarget) {
+                    isArmedForReal = true
+                    android.util.Log.i("TradingEngine", "Gatilho V-LOSS atingido! Armado para REAL.")
                 }
             }
         }

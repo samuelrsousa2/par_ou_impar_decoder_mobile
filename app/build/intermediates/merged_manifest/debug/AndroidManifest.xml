@@ -29,7 +29,6 @@
         android:label="Par Impar Decoder"
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.ParImparDecoderMobile" >
         <activity
             android:name="com.deriv.parimpar.MainActivity"
